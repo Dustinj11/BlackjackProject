@@ -3,9 +3,8 @@ package com.skilldistillery.cards.common;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Hand {
-	
-	private List<Card> cards = new ArrayList<>(); 
+public class Hand{
+	private List<Card> cards = new ArrayList<>();
 
 	public List<Card> getCards() { 
 		return cards;
@@ -15,7 +14,7 @@ public class Hand {
 		getCards().add(card);
 	}
 
-	public int getHandValue() {  
+	public int getHandValue() { 
 		int value = 0;
 		for (Card card : getCards()) {
 			value += card.getValue();
@@ -23,7 +22,7 @@ public class Hand {
 		return value;
 	}
 
-	public void fold() { 	
+	public void clear() { 
 		getCards().clear();
 	}
 

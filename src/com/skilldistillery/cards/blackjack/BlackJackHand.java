@@ -6,13 +6,14 @@ import java.util.List;
 import com.skilldistillery.cards.common.Card;
 import com.skilldistillery.cards.common.Hand;
 
-public class BlackJackHand extends Hand {  
-	private List<Card> cards = new ArrayList<>(); 
+public class BlackJackHand extends Hand {
+	private List<Card> cards = new ArrayList<>();
+
 	public void addCard(Card card) {
 		getCards().add(card);
 	}
 
-	public void fold() {
+	public void clear() {
 		getCards().clear();
 	}
 

@@ -8,7 +8,7 @@ public class Card {
 	private Suit suit;
 
 	public Card(Rank rank, Suit suit) {
-		// super(); instructor had this doestn't effect anyting so not needed
+		// super(); instructor had this doestn't effect anything so not needed
 		this.rank = rank;
 		this.suit = suit;
 	}

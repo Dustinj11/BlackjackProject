@@ -4,7 +4,7 @@ public interface Person {
 	int getHandValue();
 	void displayHand();
 	void addToHand();
-	void fold();
+	void clear();
 	
 	
 }

@@ -26,7 +26,7 @@ public class Deck {
 	}
 
 	public void shuffle() {
-		Collections.shuffle(cards);
+		Collections.shuffle(cards); // doesn't appear to be working when app is ran
 	}
 
 	public Card dealCard() {

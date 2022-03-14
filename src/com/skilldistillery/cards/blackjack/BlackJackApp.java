@@ -27,7 +27,7 @@ public class BlackJackApp {
 				System.out.println("The dealer is showing: ");
 				while (player.getHandValue() < 21 && checkMenu == true) {
 					showMenu(); 
-					checkMenu = menuSwitch(player.playerInput());  
+					checkMenu = menuSelection(player.playerInput());  
 				}
 				dealer.turn(); 
 				System.out.println("");
@@ -35,7 +35,7 @@ public class BlackJackApp {
 				System.out.println("Your hand:  " + player.getHandValue());
 				System.out.println("Dealer hand:  " + dealer.getHandValue());
 				System.out.println();
-				winnerOutcome(player.getHandValue(), dealer.getHandValue());
+				winner(player.getHandValue(), dealer.getHandValue());
 				player.clear();
 				dealer.clear(); // clears both hands for the next round was originally adding more cards to the original hand dealt. 
 				dealer.newDeck(); // new game new deck
@@ -55,7 +55,7 @@ public class BlackJackApp {
 			System.out.println("");
 		}
 		
-		private boolean menuSwitch(int userInput) {
+		private boolean menuSelection(int userInput) {
 			
 			switch (userInput) {
 			case 1: 
@@ -67,7 +67,7 @@ public class BlackJackApp {
 				break;
 
 			case 2:
-				System.out.println("Player is standing.");
+				System.out.println("Player is standing");
 				return false;
 			default:
 				System.out.println("ERROR | select 1-2");
@@ -78,7 +78,7 @@ public class BlackJackApp {
 
 		}
 
-		private void winnerOutcome(int playerHand, int dealerHand) {
+		private void winner(int playerHand, int dealerHand) {
 			if (player.getCards().size() == 2 && player.getHandValue() == 21) {
 				System.out.println("Blackjack! You win!");
 			} else if (playerHand <= 21 && dealerHand <= 21 && playerHand > dealerHand) {
